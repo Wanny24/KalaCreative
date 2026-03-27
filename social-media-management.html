@@ -85,7 +85,7 @@
             line-height: 1.6;
         }
         
-        /* Service Benefits Section */
+        /* Service Benefits Section - 6 Items */
         .benefits-section {
             padding: 60px 0;
             background: white;
@@ -93,14 +93,14 @@
         
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
         
         .benefit-card {
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 25px;
             background: linear-gradient(135deg, #F5F0FF, #FAF5FF);
             border-radius: 20px;
             transition: all 0.3s;
@@ -147,7 +147,7 @@
         
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -159,6 +159,9 @@
             transition: all 0.3s;
             box-shadow: var(--shadow-sm);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .package-card.featured {
@@ -177,6 +180,7 @@
             border-radius: 20px;
             font-size: 0.7rem;
             font-weight: 600;
+            z-index: 2;
         }
         
         .package-header {
@@ -191,25 +195,17 @@
             color: var(--dark);
         }
         
-        .package-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-purple);
-        }
-        
-        .package-price span {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #6b5a68;
-        }
-        
         .package-features {
             padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .package-features ul {
             list-style: none;
             margin-bottom: 30px;
+            flex: 1;
         }
         
         .package-features li {
@@ -224,6 +220,7 @@
             color: var(--primary-purple);
             font-size: 0.9rem;
             width: 24px;
+            flex-shrink: 0;
         }
         
         .package-features li span {
@@ -231,24 +228,26 @@
             font-size: 0.9rem;
         }
         
+        .package-btn-wrapper {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
         .package-btn {
             display: block;
             text-align: center;
-            background: transparent;
-            border: 2px solid var(--primary-purple);
-            color: var(--primary-purple);
-            padding: 12px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet));
+            color: white;
+            padding: 14px 20px;
             border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            margin-top: 20px;
         }
         
         .package-btn:hover {
-            background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet));
-            color: white;
-            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108,99,255,0.3);
         }
         
         /* Why Choose Us Section */
@@ -405,6 +404,15 @@
             gap: 12px;
         }
         
+        @media (max-width: 992px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
         @media (max-width: 768px) {
             .service-hero {
                 padding: 120px 0 60px;
@@ -412,13 +420,16 @@
             .service-hero h1 {
                 font-size: 2rem;
             }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
             .packages-grid {
                 grid-template-columns: 1fr;
             }
             .package-card.featured {
                 transform: scale(1);
             }
-            .benefits-grid, .why-grid {
+            .why-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -502,7 +513,7 @@
         </div>
     </section>
 
-    <!-- What We Do Section -->
+    <!-- What We Do Section - 6 Layanan Unggulan -->
     <section class="benefits-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -516,12 +527,12 @@
                     <p>Perencanaan konten 1 bulan ke depan dengan strategi yang disesuaikan target audiens Anda.</p>
                 </div>
                 <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="benefit-icon"><i class="fas fa-paintbrush"></i></div>
+                    <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
                     <h3>Design & Short Video</h3>
                     <p>Konten visual menarik berupa feed, carousel, dan video pendek yang engaging.</p>
                 </div>
                 <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="benefit-icon"><i class="fas fa-chart-simple"></i></div>
+                    <div class="benefit-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3>Analytics & Reporting</h3>
                     <p>Laporan performa mingguan dan bulanan untuk mengukur efektivitas strategi.</p>
                 </div>
@@ -530,11 +541,21 @@
                     <h3>Community Management</h3>
                     <p>Interaksi aktif dengan audiens untuk membangun loyalitas dan kepercayaan.</p>
                 </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3>Hashtag Research</h3>
+                    <p>Riset hashtag optimal untuk meningkatkan jangkauan konten Anda.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Scheduling & Posting</h3>
+                    <p>Penjadwalan dan posting konten tepat waktu di prime time audiens.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Packages Section -->
+    <!-- Packages Section (Tanpa Harga) -->
     <section class="packages-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -546,7 +567,6 @@
                 <div class="package-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="package-header">
                         <h3>Basic</h3>
-                        <div class="package-price">Rp 2.500.000 <span>/bulan</span></div>
                     </div>
                     <div class="package-features">
                         <ul>
@@ -558,7 +578,9 @@
                             <li><i class="fas fa-check-circle"></i><span>Weekly Reporting</span></li>
                             <li><i class="fas fa-check-circle"></i><span>Revisi Visual 1x</span></li>
                         </ul>
-                        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Basic%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Basic%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
@@ -567,7 +589,6 @@
                     <div class="package-badge">Best Choice</div>
                     <div class="package-header">
                         <h3>Special</h3>
-                        <div class="package-price">Rp 4.500.000 <span>/bulan</span></div>
                     </div>
                     <div class="package-features">
                         <ul>
@@ -581,7 +602,9 @@
                             <li><i class="fas fa-check-circle"></i><span>Revisi Visual 2x</span></li>
                             <li><i class="fas fa-check-circle"></i><span>Account Performance Optimization</span></li>
                         </ul>
-                        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Special%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Special%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
 
@@ -589,7 +612,6 @@
                 <div class="package-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="package-header">
                         <h3>Platinum</h3>
-                        <div class="package-price">Rp 7.500.000 <span>/bulan</span></div>
                     </div>
                     <div class="package-features">
                         <ul>
@@ -604,7 +626,9 @@
                             <li><i class="fas fa-check-circle"></i><span>Revisi Visual Unlimited</span></li>
                             <li><i class="fas fa-check-circle"></i><span>Dedicated Account Manager</span></li>
                         </ul>
-                        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Platinum%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Platinum%20Social%20Media%20Management" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
