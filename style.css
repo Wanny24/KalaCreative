@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo, .section-title {
+h1, h2, h3, .section-title {
     font-family: 'Playfair Display', serif;
 }
 
@@ -94,10 +94,10 @@ h1, h2, h3, .logo, .section-title {
     box-shadow: var(--shadow-md);
 }
 
-/* ========== LIVE CHAT WIDGET ========== */
+/* ========== LIVE CHAT WIDGET (POSISI DIPERBAIKI) ========== */
 .chat-widget {
     position: fixed;
-    bottom: 100px;
+    bottom: 30px;
     right: 30px;
     z-index: 1000;
 }
@@ -141,7 +141,7 @@ h1, h2, h3, .logo, .section-title {
 
 .chat-box {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     right: 0;
     width: 350px;
     background: white;
@@ -264,6 +264,19 @@ h1, h2, h3, .logo, .section-title {
 
 .chat-send:hover { transform: scale(1.05); background: var(--primary-violet); }
 
+/* ========== LOGO GAMBAR ========== */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
 /* ========== PARTICLE CANVAS ========== */
 #particle-canvas {
     position: absolute;
@@ -308,20 +321,6 @@ h1, h2, h3, .logo, .section-title {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.logo span {
-    background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 .nav-links {
@@ -539,7 +538,7 @@ h1, h2, h3, .logo, .section-title {
     flex-wrap: wrap;
 }
 
-/* Rocket Animation - Lebih Besar */
+/* Rocket Animation */
 .hero-right {
     display: flex;
     justify-content: center;
@@ -1213,6 +1212,7 @@ footer {
     .rocket-animation { width: 280px; height: 280px; }
     .rocket-body { width: 70px; height: 100px; }
     .rocket-body i { font-size: 2.5rem; }
+    .logo-img { height: 38px; }
 }
 
 @media (max-width: 768px) {
@@ -1275,4 +1275,5 @@ footer {
     .rocket-body i { font-size: 2rem; }
     .chat-box { width: 300px; right: 0; }
     .chat-question-btn { font-size: 0.7rem; padding: 4px 10px; }
+    .logo-img { height: 32px; }
 }
