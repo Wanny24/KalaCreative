@@ -21,83 +21,64 @@
     <div class="loader"></div>
 </div>
 
-<!-- Back to Top Button -->
+<!-- Back to Top Button (KIRI) -->
 <button id="backToTop" class="back-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
 
+<!-- Live Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-pulse"></span>
+    </div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h4>✨ Kala Creative Assistant</h4>
+            <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-bubble">
+                    Halo! 👋 Ada yang bisa saya bantu? Silakan pilih pertanyaan di bawah atau ketik pertanyaan Anda.
+                </div>
+            </div>
+        </div>
+        <div class="chat-questions">
+            <button class="chat-question-btn" data-question="layanan">Apa saja layanan Kala Creative?</button>
+            <button class="chat-question-btn" data-question="harga">Berapa harga paket layanan?</button>
+            <button class="chat-question-btn" data-question="kontak">Bagaimana cara menghubungi?</button>
+            <button class="chat-question-btn" data-question="waktu">Berapa lama proses pengerjaan?</button>
+            <button class="chat-question-btn" data-question="portfolio">Bisa lihat portfolio?</button>
+            <button class="chat-question-btn" data-question="custom">Bisa custom paket?</button>
+            <button class="chat-question-btn" data-question="garansi">Ada garansi?</button>
+            <button class="chat-question-btn" data-question="lokasi">Di mana lokasi kantor?</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Tulis pertanyaan..." class="chat-input">
+            <button id="chatSend" class="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
     <div class="container nav-container">
-        <div class="logo">Kala<span>Creative</span></div>
+        <a href="index.html" class="logo">Kala<span>Creative</span></a>
         <ul class="nav-links" id="navLinks">
             <li class="nav-item has-dropdown">
                 <a href="#" class="nav-link">Layanan <i class="fas fa-chevron-down"></i></a>
                 <div class="dropdown-menu">
                     <div class="dropdown-grid">
-                        <a href="social-media-management.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fab fa-instagram"></i></div>
-                            <div>
-                                <h4>Social Media Management</h4>
-                                <p>Kelola media sosial brand Anda</p>
-                            </div>
-                        </a>
-                        <a href="creative-content.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-camera-retro"></i></div>
-                            <div>
-                                <h4>Creative Content</h4>
-                                <p>Produksi konten kreatif berkualitas</p>
-                            </div>
-                        </a>
-                        <a href="meta-ads.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <h4>Iklan Meta</h4>
-                                <p>Strategi iklan Facebook & Instagram</p>
-                            </div>
-                        </a>
-                        <a href="brand-identity.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-palette"></i></div>
-                            <div>
-                                <h4>Brand Identity</h4>
-                                <p>Ciptakan identitas brand yang kuat</p>
-                            </div>
-                        </a>
-                        <a href="web-development.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-code"></i></div>
-                            <div>
-                                <h4>Web Development</h4>
-                                <p>Website modern & responsif</p>
-                            </div>
-                        </a>
-                        <a href="live-tiktok.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fab fa-tiktok"></i></div>
-                            <div>
-                                <h4>Live TikTok</h4>
-                                <p>Optimasi live streaming TikTok</p>
-                            </div>
-                        </a>
-                        <a href="graphic-design.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-pen-fancy"></i></div>
-                            <div>
-                                <h4>Graphic Design</h4>
-                                <p>Desain grafis untuk berbagai kebutuhan</p>
-                            </div>
-                        </a>
-                        <a href="product-photo.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-camera"></i></div>
-                            <div>
-                                <h4>Foto Produk</h4>
-                                <p>Fotografi produk profesional</p>
-                            </div>
-                        </a>
-                        <a href="bot-automation.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class="fas fa-robot"></i></div>
-                            <div>
-                                <h4>Bot Automation</h4>
-                                <p>Otomatisasi chat & customer service</p>
-                            </div>
-                        </a>
+                        <a href="social-media-management.html" class="dropdown-item"><div class="dropdown-icon"><i class="fab fa-instagram"></i></div><div><h4>Social Media Management</h4><p>Kelola media sosial brand Anda</p></div></a>
+                        <a href="creative-content.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-camera-retro"></i></div><div><h4>Creative Content</h4><p>Produksi konten kreatif berkualitas</p></div></a>
+                        <a href="meta-ads.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-chart-line"></i></div><div><h4>Iklan Meta</h4><p>Strategi iklan Facebook & Instagram</p></div></a>
+                        <a href="brand-identity.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-palette"></i></div><div><h4>Brand Identity</h4><p>Ciptakan identitas brand yang kuat</p></div></a>
+                        <a href="web-development.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-code"></i></div><div><h4>Web Development</h4><p>Website modern & responsif</p></div></a>
+                        <a href="live-tiktok.html" class="dropdown-item"><div class="dropdown-icon"><i class="fab fa-tiktok"></i></div><div><h4>Live TikTok</h4><p>Optimasi live streaming TikTok</p></div></a>
+                        <a href="graphic-design.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-pen-fancy"></i></div><div><h4>Graphic Design</h4><p>Desain grafis untuk berbagai kebutuhan</p></div></a>
+                        <a href="product-photo.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-camera"></i></div><div><h4>Foto Produk</h4><p>Fotografi produk profesional</p></div></a>
+                        <a href="bot-automation.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-robot"></i></div><div><h4>Bot Automation</h4><p>Otomatisasi chat & customer service</p></div></a>
                     </div>
                 </div>
             </li>
@@ -118,13 +99,14 @@
 <main>
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <canvas id="particle-canvas"></canvas>
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
                     <div class="hero-badge">Creative Agency Since 2020</div>
                     <h1>
                         We Shape <span class="hero-gradient">Digital Identities</span><br>
-                        That Last
+                        <span class="typing-text" id="typingText"></span>
                     </h1>
                     <p class="hero-subtitle">Strategi kreatif & eksekusi visual untuk membangun brand yang tak lekang oleh waktu.</p>
                     <div class="hero-buttons">
@@ -162,80 +144,7 @@
                 <span class="section-subtitle">Apa yang Kami Tawarkan</span>
                 <h2 class="section-title">Layanan Kami</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <p>Pengelolaan akun media sosial dengan konten strategis & engagement organik.</p>
-                    <a href="social-media-management.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-camera-retro"></i>
-                    </div>
-                    <h3>Creative Content Production</h3>
-                    <p>Produksi konten kreatif berupa foto, video, dan motion graphics yang engaging.</p>
-                    <a href="creative-content.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Iklan Meta</h3>
-                    <p>Strategi iklan di Facebook & Instagram dengan targeting tepat dan ROI terukur.</p>
-                    <a href="meta-ads.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Brand Identity Design</h3>
-                    <p>Logo, visual identity, brand guidelines — menciptakan karakter brand yang autentik.</p>
-                    <a href="brand-identity.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Pengembangan website modern, responsif, dan optimal untuk kebutuhan bisnis Anda.</p>
-                    <a href="web-development.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <i class="fab fa-tiktok"></i>
-                    </div>
-                    <h3>Live TikTok Handling</h3>
-                    <p>Pengelolaan live streaming TikTok untuk meningkatkan interaksi dan penjualan.</p>
-                    <a href="live-tiktok.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h3>Design Graphic</h3>
-                    <p>Desain grafis untuk berbagai kebutuhan visual brand Anda.</p>
-                    <a href="graphic-design.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3>Foto Produk</h3>
-                    <p>Fotografi produk profesional untuk meningkatkan daya tarik visual.</p>
-                    <a href="product-photo.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="800">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Bot Automation</h3>
-                    <p>Otomatisasi chat, customer service, dan sistem auto-reply untuk efisiensi bisnis.</p>
-                    <a href="bot-automation.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+            <div class="services-grid" id="servicesGrid"></div>
         </div>
     </section>
 
@@ -289,6 +198,13 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <!-- Clients Section -->
     <section id="clients">
         <div class="container">
@@ -313,24 +229,15 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>hello@kalacreative.id</p>
-                            </div>
+                            <div><h4>Email</h4><p>hello@kalacreative.id</p></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <p>+62 855 1115 118</p>
-                            </div>
+                            <div><h4>WhatsApp</h4><p>+62 855 1115 118</p></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Alamat</h4>
-                                <p>Jakarta Selatan, Indonesia</p>
-                            </div>
+                            <div><h4>Alamat</h4><p>Jakarta Selatan, Indonesia</p></div>
                         </div>
                     </div>
                     <div class="contact-social">
@@ -362,6 +269,12 @@
                         <div class="form-group">
                             <textarea id="message" rows="5" placeholder="Ceritakan proyek Anda..." required></textarea>
                             <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="captcha-container">
+                            <div class="captcha-question">
+                                <span id="captchaNum1">5</span> + <span id="captchaNum2">3</span> = ?
+                            </div>
+                            <input type="number" id="captchaInput" placeholder="Jawaban" required>
                         </div>
                         <button type="submit" class="btn-primary submit-btn">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
                         <div id="formMessage" class="form-message"></div>
@@ -397,10 +310,14 @@
                 <a href="web-development.html">Web Development</a>
                 <a href="bot-automation.html">Bot Automation</a>
             </div>
-            <div class="footer-col">
-                <h4>Kontak</h4>
-                <p><i class="fab fa-whatsapp"></i> +62 855 1115 118</p>
-                <p><i class="fas fa-envelope"></i> hello@kalacreative.id</p>
+            <div class="footer-col newsletter-col">
+                <h4>Newsletter</h4>
+                <p>Dapatkan tips & promo terbaru</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Email Anda">
+                    <button id="newsletterBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div id="newsletterMessage" class="newsletter-message"></div>
             </div>
         </div>
         <div class="copyright">
