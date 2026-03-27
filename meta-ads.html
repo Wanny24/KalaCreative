@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Iklan Meta - Kala Creative</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #F5F0FF 0%, #E8E0FF 100%);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(108,99,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(157,138,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .service-hero .container { position: relative; z-index: 2; }
+        .service-hero-content { text-align: center; max-width: 800px; margin: 0 auto; }
+        .service-icon-large { width: 100px; height: 100px; background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(157,138,255,0.15)); border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .service-icon-large i { font-size: 3.5rem; color: var(--primary-purple); }
+        .service-hero h1 { font-size: 3rem; font-family: 'Playfair Display', serif; color: var(--dark); margin-bottom: 20px; }
+        .service-hero p { font-size: 1.1rem; color: #5a4a68; line-height: 1.6; }
+        .benefits-section { padding: 60px 0; background: white; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .benefit-card { text-align: center; padding: 35px 25px; background: linear-gradient(135deg, #F5F0FF, #FAF5FF); border-radius: 20px; transition: all 0.3s; }
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .benefit-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .benefit-icon i { font-size: 2rem; color: white; }
+        .benefit-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--dark); }
+        .benefit-card p { color: #5a4a68; font-size: 0.9rem; line-height: 1.5; }
+        .packages-section { padding: 60px 0; background: linear-gradient(135deg, #F8F4FF, #F0EAFF); }
+        .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .package-card { background: white; border-radius: 24px; overflow: hidden; transition: all 0.3s; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column; height: 100%; }
+        .package-card.featured { transform: scale(1.02); border: 2px solid var(--primary-purple); box-shadow: var(--shadow-lg); }
+        .package-badge { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet)); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; z-index: 2; }
+        .package-header { padding: 30px; text-align: center; background: linear-gradient(135deg, #F5F0FF, #FAF5FF); }
+        .package-header h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--dark); }
+        .package-features { padding: 30px; flex: 1; display: flex; flex-direction: column; }
+        .package-features ul { list-style: none; margin-bottom: 30px; flex: 1; }
+        .package-features li { padding: 12px 0; border-bottom: 1px solid rgba(108,99,255,0.1); display: flex; align-items: center; gap: 12px; }
+        .package-features li i { color: var(--primary-purple); font-size: 0.9rem; width: 24px; flex-shrink: 0; }
+        .package-features li span { color: #5a4a68; font-size: 0.9rem; }
+        .package-btn-wrapper { margin-top: auto; padding-top: 20px; }
+        .package-btn { display: block; text-align: center; background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet)); color: white; padding: 14px 20px; border-radius: 40px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .package-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(108,99,255,0.3); }
+        .why-choose-section { padding: 60px 0; background: white; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .why-card { text-align: center; padding: 30px 20px; border-radius: 20px; transition: all 0.3s; border: 1px solid rgba(108,99,255,0.1); }
+        .why-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--primary-purple); }
+        .why-number { width: 50px; height: 50px; background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(157,138,255,0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; font-weight: 700; color: var(--primary-purple); }
+        .why-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--dark); }
+        .why-card p { color: #5a4a68; font-size: 0.9rem; line-height: 1.5; }
+        .faq-section { padding: 60px 0; background: linear-gradient(135deg, #F5F0FF, #E8E0FF); }
+        .faq-grid { max-width: 800px; margin: 40px auto 0; }
+        .faq-item { background: white; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
+        .faq-question { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; color: var(--dark); }
+        .faq-question i { color: var(--primary-purple); transition: transform 0.3s; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-answer { padding: 0 24px 20px 24px; display: none; color: #5a4a68; line-height: 1.6; border-top: 1px solid rgba(108,99,255,0.1); }
+        .faq-item.active .faq-answer { display: block; }
+        .cta-section-service { padding: 60px 0; background: linear-gradient(135deg, var(--primary-purple), var(--primary-violet)); text-align: center; color: white; }
+        .cta-section-service h2 { font-size: 2rem; margin-bottom: 16px; }
+        .cta-section-service p { margin-bottom: 30px; opacity: 0.9; }
+        .cta-btn-white { display: inline-flex; align-items: center; gap: 10px; background: white; color: var(--primary-purple); padding: 14px 36px; border-radius: 40px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .cta-btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .back-home-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--primary-purple); text-decoration: none; margin-top: 30px; font-weight: 500; transition: gap 0.3s; }
+        .back-home-btn:hover { gap: 12px; }
+        @media (max-width: 992px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } .packages-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .service-hero { padding: 120px 0 60px; } .service-hero h1 { font-size: 2rem; } .benefits-grid { grid-template-columns: 1fr; } .packages-grid { grid-template-columns: 1fr; } .package-card.featured { transform: scale(1); } .why-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">Kala<span>Creative</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Layanan <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="social-media-management.html" class="dropdown-item"><div class="dropdown-icon"><i class="fab fa-instagram"></i></div><div><h4>Social Media Management</h4><p>Kelola media sosial brand Anda</p></div></a>
+                        <a href="creative-content.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-camera-retro"></i></div><div><h4>Creative Content</h4><p>Produksi konten kreatif berkualitas</p></div></a>
+                        <a href="meta-ads.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-chart-line"></i></div><div><h4>Iklan Meta</h4><p>Strategi iklan Facebook & Instagram</p></div></a>
+                        <a href="brand-identity.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-palette"></i></div><div><h4>Brand Identity</h4><p>Ciptakan identitas brand yang kuat</p></div></a>
+                        <a href="web-development.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-code"></i></div><div><h4>Web Development</h4><p>Website modern & responsif</p></div></a>
+                        <a href="live-tiktok.html" class="dropdown-item"><div class="dropdown-icon"><i class="fab fa-tiktok"></i></div><div><h4>Live TikTok</h4><p>Optimasi live streaming TikTok</p></div></a>
+                        <a href="graphic-design.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-pen-fancy"></i></div><div><h4>Graphic Design</h4><p>Desain grafis untuk berbagai kebutuhan</p></div></a>
+                        <a href="product-photo.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-camera"></i></div><div><h4>Foto Produk</h4><p>Fotografi produk profesional</p></div></a>
+                        <a href="bot-automation.html" class="dropdown-item"><div class="dropdown-icon"><i class="fas fa-robot"></i></div><div><h4>Bot Automation</h4><p>Otomatisasi chat & customer service</p></div></a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="index.html#portfolio">Karya</a></li>
+            <li><a href="index.html#clients">Klien</a></li>
+        </ul>
+        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20layanan%20Iklan%20Meta" class="nav-cta-btn" target="_blank"><span>Hubungi Kami</span><i class="fab fa-whatsapp"></i></a>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content" data-aos="fade-up">
+                <div class="service-icon-large"><i class="fas fa-chart-line"></i></div>
+                <h1>Iklan Meta</h1>
+                <p>Strategi iklan di Facebook & Instagram dengan targeting tepat dan ROI terukur. Tingkatkan penjualan dan brand awareness Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section - 6 Layanan Unggulan -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Apa yang Kami Lakukan</span>
+                <h2 class="section-title">Layanan Unggulan Kami</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up">
+                    <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Audience Targeting</h3>
+                    <p>Penargetan audiens yang tepat berdasarkan demografi, minat, dan perilaku.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon"><i class="fas fa-ad"></i></div>
+                    <h3>Creative Ads</h3>
+                    <p>Desain iklan yang menarik dengan copywriting efektif untuk konversi.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon"><i class="fas fa-chart-simple"></i></div>
+                    <h3>A/B Testing</h3>
+                    <p>Pengujian berbagai variabel iklan untuk menemukan performa terbaik.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Budget Optimization</h3>
+                    <p>Optimasi anggaran iklan untuk hasil maksimal dengan biaya efisien.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Pemantauan performa iklan secara real-time untuk penyesuaian cepat.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Detailed Reporting</h3>
+                    <p>Laporan lengkap performa iklan dan rekomendasi strategi selanjutnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Pilih Sesuai Kebutuhan</span>
+                <h2 class="section-title">Paket Iklan Meta</h2>
+            </div>
+            <div class="packages-grid">
+                <!-- Basic Package -->
+                <div class="package-card" data-aos="fade-up">
+                    <div class="package-header"><h3>Basic Ads</h3></div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i><span>Setup Campaign & Ad Account</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Audience Research</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>3 Creative Ads</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Weekly Reporting</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Optimasi Budget Rp 5-15jt</span></li>
+                        </ul>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Basic%20Ads" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Package (Featured) -->
+                <div class="package-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="package-badge">Best Choice</div>
+                    <div class="package-header"><h3>Performance Ads</h3></div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i><span>Full Campaign Management</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>A/B Testing (3 Variants)</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>5 Creative Ads + Retargeting</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Real-time Optimization</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Weekly + Monthly Reporting</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Optimasi Budget Rp 15-30jt</span></li>
+                        </ul>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Performance%20Ads" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platinum Package -->
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="package-header"><h3>Enterprise Ads</h3></div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i><span>Full Funnel Strategy</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>A/B Testing (5+ Variants)</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>10+ Creative Ads + Dynamic Ads</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Advanced Pixel & Tracking</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Dedicated Account Manager</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Optimasi Budget 30jt++</span></li>
+                        </ul>
+                        <div class="package-btn-wrapper">
+                            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20paket%20Enterprise%20Ads" class="package-btn" target="_blank">Pilih Paket <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Mengapa Kami?</span>
+                <h2 class="section-title">Kenapa Memilih Kala Creative?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up"><div class="why-number">1</div><h3>Certified Meta Partner</h3><p>Tim kami tersertifikasi dan mengikuti perkembangan algoritma terbaru.</p></div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100"><div class="why-number">2</div><h3>Data-Driven Strategy</h3><p>Setiap keputusan berdasarkan analisis data dan insight audiens.</p></div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200"><div class="why-number">3</div><h3>ROI Focused</h3><p>Fokus pada hasil yang terukur dengan biaya iklan yang efisien.</p></div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300"><div class="why-number">4</div><h3>Transparent Reporting</h3><p>Laporan lengkap dengan insight yang dapat dipahami.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Pertanyaan Umum</span>
+                <h2 class="section-title">Yang Sering Ditanyakan</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question"><span>Berapa budget minimal untuk iklan Meta?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Budget minimal yang direkomendasikan adalah Rp 5.000.000 per bulan untuk hasil yang optimal.</div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question"><span>Kapan bisa melihat hasil iklan?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Hasil biasanya mulai terlihat setelah 7-14 hari masa pembelajaran iklan.</div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question"><span>Apakah bisa menggabungkan dengan layanan lain?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Tentu, kami memiliki paket bundling dengan Social Media Management dan Creative Content.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-service">
+        <div class="container">
+            <h2 data-aos="fade-up">Siap Meningkatkan Konversi dengan Iklan Meta?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Konsultasikan strategi iklan Anda dengan tim ahli kami secara gratis.</p>
+            <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20layanan%20Iklan%20Meta" class="cta-btn-white" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi Gratis</a>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="container" style="text-align: center; padding: 40px 0;">
+        <a href="index.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Kala<span>Creative</span></h4><p>Timeless Digital Identity</p><p>Kami membantu brand membangun identitas digital yang abadi dan berdampak.</p></div>
+            <div class="footer-col"><h4>Jelajahi</h4><a href="index.html">Beranda</a><a href="index.html#services">Layanan</a><a href="index.html#about">Tentang</a><a href="index.html#portfolio">Karya</a><a href="index.html#clients">Klien</a></div>
+            <div class="footer-col"><h4>Layanan</h4><a href="social-media-management.html">Social Media Management</a><a href="creative-content.html">Creative Content</a><a href="brand-identity.html">Brand Identity</a><a href="web-development.html">Web Development</a><a href="bot-automation.html">Bot Automation</a></div>
+            <div class="footer-col"><h4>Kontak</h4><p><i class="fab fa-whatsapp"></i> +62 855 1115 118</p><p><i class="fas fa-envelope"></i> hello@kalacreative.id</p></div>
+        </div>
+        <div class="copyright">&copy; 2025 Kala Creative — Timeless Digital Identity. All rights reserved.</div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    const menuToggle = document.getElementById('menuToggle'); const navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) { menuToggle.addEventListener('click', () => navLinks.classList.toggle('active')); document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { if (window.innerWidth <= 768) navLinks.classList.remove('active'); }); }); }
+    const navItem = document.querySelector('.nav-item'); if (window.innerWidth <= 768 && navItem) { const serviceLink = navItem.querySelector('.nav-link'); serviceLink.addEventListener('click', (e) => { e.preventDefault(); navItem.classList.toggle('active'); }); }
+    const faqItems = document.querySelectorAll('.faq-item'); faqItems.forEach(item => { const question = item.querySelector('.faq-question'); question.addEventListener('click', () => { item.classList.toggle('active'); }); });
+    let lastScrollTop = 0; const navbar = document.getElementById('navbar'); window.addEventListener('scroll', () => { const scrollTop = window.pageYOffset || document.documentElement.scrollTop; if (scrollTop > lastScrollTop && scrollTop > 100) { navbar.classList.add('hide'); navbar.classList.remove('show'); } else { navbar.classList.remove('hide'); navbar.classList.add('show'); } if (scrollTop > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; });
+</script>
+</body>
+</html>
