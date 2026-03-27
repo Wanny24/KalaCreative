@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Kala Creative - Creative Agency for Timeless Digital Identity">
+    <title>Kala Creative - Timeless Digital Identity</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Animation -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="logo">Kala<span>Creative</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Layanan <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="social-media-management.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <h4>Social Media Management</h4>
+                                <p>Kelola media sosial brand Anda</p>
+                            </div>
+                        </a>
+                        <a href="creative-content.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-camera-retro"></i></div>
+                            <div>
+                                <h4>Creative Content</h4>
+                                <p>Produksi konten kreatif berkualitas</p>
+                            </div>
+                        </a>
+                        <a href="meta-ads.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h4>Iklan Meta</h4>
+                                <p>Strategi iklan Facebook & Instagram</p>
+                            </div>
+                        </a>
+                        <a href="brand-identity.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-palette"></i></div>
+                            <div>
+                                <h4>Brand Identity</h4>
+                                <p>Ciptakan identitas brand yang kuat</p>
+                            </div>
+                        </a>
+                        <a href="web-development.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h4>Web Development</h4>
+                                <p>Website modern & responsif</p>
+                            </div>
+                        </a>
+                        <a href="live-tiktok.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fab fa-tiktok"></i></div>
+                            <div>
+                                <h4>Live TikTok</h4>
+                                <p>Optimasi live streaming TikTok</p>
+                            </div>
+                        </a>
+                        <a href="graphic-design.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-pen-fancy"></i></div>
+                            <div>
+                                <h4>Graphic Design</h4>
+                                <p>Desain grafis untuk berbagai kebutuhan</p>
+                            </div>
+                        </a>
+                        <a href="product-photo.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-camera"></i></div>
+                            <div>
+                                <h4>Foto Produk</h4>
+                                <p>Fotografi produk profesional</p>
+                            </div>
+                        </a>
+                        <a href="bot-automation.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <h4>Bot Automation</h4>
+                                <p>Otomatisasi chat & customer service</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#portfolio">Karya</a></li>
+            <li><a href="#clients">Klien</a></li>
+        </ul>
+        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20layanan%20Anda" class="nav-cta-btn" target="_blank">
+            <span>Hubungi Kami</span>
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-badge">Creative Agency Since 2020</div>
+                    <h1>
+                        We Shape <span class="hero-gradient">Digital Identities</span><br>
+                        That Last
+                    </h1>
+                    <p class="hero-subtitle">Strategi kreatif & eksekusi visual untuk membangun brand yang tak lekang oleh waktu.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/628551115118?text=Halo%20Kala%20Creative,%20saya%20tertarik%20dengan%20layanan%20Anda" class="btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Start Your Journey
+                        </a>
+                        <a href="#portfolio" class="btn-outline">Lihat Karya <i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="rocket-animation">
+                        <div class="rocket">
+                            <div class="rocket-body">
+                                <div class="rocket-window"></div>
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="rocket-fire"></div>
+                        </div>
+                        <div class="floating-icons">
+                            <i class="fas fa-star star-1"></i>
+                            <i class="fas fa-star star-2"></i>
+                            <i class="fas fa-circle circle-1"></i>
+                            <i class="fas fa-circle circle-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Apa yang Kami Tawarkan</span>
+                <h2 class="section-title">Layanan Kami</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Pengelolaan akun media sosial dengan konten strategis & engagement organik.</p>
+                    <a href="social-media-management.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Creative Content Production</h3>
+                    <p>Produksi konten kreatif berupa foto, video, dan motion graphics yang engaging.</p>
+                    <a href="creative-content.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Iklan Meta</h3>
+                    <p>Strategi iklan di Facebook & Instagram dengan targeting tepat dan ROI terukur.</p>
+                    <a href="meta-ads.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Brand Identity Design</h3>
+                    <p>Logo, visual identity, brand guidelines — menciptakan karakter brand yang autentik.</p>
+                    <a href="brand-identity.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Pengembangan website modern, responsif, dan optimal untuk kebutuhan bisnis Anda.</p>
+                    <a href="web-development.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>Live TikTok Handling</h3>
+                    <p>Pengelolaan live streaming TikTok untuk meningkatkan interaksi dan penjualan.</p>
+                    <a href="live-tiktok.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Design Graphic</h3>
+                    <p>Desain grafis untuk berbagai kebutuhan visual brand Anda.</p>
+                    <a href="graphic-design.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Foto Produk</h3>
+                    <p>Fotografi produk profesional untuk meningkatkan daya tarik visual.</p>
+                    <a href="product-photo.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Bot Automation</h3>
+                    <p>Otomatisasi chat, customer service, dan sistem auto-reply untuk efisiensi bisnis.</p>
+                    <a href="bot-automation.html" class="service-link">Pelajari <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text" data-aos="fade-up">
+                    <span class="section-subtitle">Tentang Kami</span>
+                    <h2>Tentang Kala Creative</h2>
+                    <div class="brush-stroke">
+                        <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+                            <path d="M0,20 Q50,5 100,20 T200,20 T300,20" stroke="#6C63FF" fill="none" stroke-width="2"/>
+                            <path d="M0,25 Q50,15 100,25 T200,25 T300,25" stroke="#9D8AFF" fill="none" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <p>Kala Creative hadir sebagai ruang kolaborasi antara strategi dan estetika. Kami percaya bahwa setiap brand memiliki waktunya sendiri untuk bersinar — dan tugas kami adalah membuat momen itu terasa abadi.</p>
+                    <p>Berpengalaman sejak 2020, kami telah mendampingi berbagai bisnis dari rintisan hingga korporasi dalam membangun identitas digital yang konsisten, berkesan, dan berdampak nyata pada pertumbuhan bisnis.</p>
+                    <div class="about-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i> Berbasis Data & Riset</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Pendekatan Kreatif</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Hasil Terukur</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Dukungan 24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Karya Terbaik</span>
+                <h2 class="section-title">Portofolio Kami</h2>
+            </div>
+            <div class="portfolio-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="content">Content</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid"></div>
+            <div class="portfolio-footer" data-aos="fade-up">
+                <a href="portfolio.html" class="load-more-btn">
+                    <span>Lihat Semua Karya</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Yang Telah Mempercayai Kami</span>
+                <h2 class="section-title">Klien Kami</h2>
+            </div>
+            <div class="clients-logos" id="clientsLogos"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Hubungi Kami</span>
+                <h2 class="section-title">Mari Bicarakan Ide Anda</h2>
+            </div>
+            <div class="contact-wrapper" data-aos="fade-up">
+                <div class="contact-info">
+                    <p class="contact-desc">Kami selalu senang mendengar ide-ide baru dan proyek yang menarik. Hubungi kami melalui kontak di bawah ini.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@kalacreative.id</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+62 855 1115 118</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jakarta Selatan, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Nama Lengkap" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Perusahaan / Brand">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Ceritakan proyek Anda..." required></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Kala<span>Creative</span></h4>
+                <p>Timeless Digital Identity</p>
+                <p>Kami membantu brand membangun identitas digital yang abadi dan berdampak.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <a href="#home">Beranda</a>
+                <a href="#services">Layanan</a>
+                <a href="#about">Tentang</a>
+                <a href="#portfolio">Karya</a>
+                <a href="#clients">Klien</a>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <a href="social-media-management.html">Social Media Management</a>
+                <a href="creative-content.html">Creative Content</a>
+                <a href="brand-identity.html">Brand Identity</a>
+                <a href="web-development.html">Web Development</a>
+                <a href="bot-automation.html">Bot Automation</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 855 1115 118</p>
+                <p><i class="fas fa-envelope"></i> hello@kalacreative.id</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Kala Creative — Timeless Digital Identity. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

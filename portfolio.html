@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kala Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF8F0;
+            color: #2C2B28;
+        }
+
+        :root {
+            --gold: #C6A43B;
+            --dark-earth: #4A3B2A;
+            --cream: #FDF8F0;
+            --white: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(253, 248, 240, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(198, 164, 59, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-earth);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .back-home {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--dark-earth);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-home:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Portfolio */
+        .portfolio-hero {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E9DCCB 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .portfolio-hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-earth);
+            margin-bottom: 20px;
+        }
+
+        .portfolio-hero p {
+            font-size: 1.2rem;
+            color: #5a4a38;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 60px 0 40px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(198, 164, 59, 0.3);
+            padding: 10px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            color: var(--dark-earth);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--dark-earth);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(74, 59, 42, 0.95), rgba(198, 164, 59, 0.9));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay h4 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2B28;
+            color: #d4cfc8;
+            padding: 50px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-hero h1 {
+                font-size: 2.5rem;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">Kala<span>Creative</span></a>
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            <span>Kembali ke Beranda</span>
+        </a>
+    </div>
+</nav>
+
+<section class="portfolio-hero">
+    <div class="container">
+        <h1>Karya Kami</h1>
+        <p>Kumpulan proyek terbaik yang telah kami kerjakan untuk berbagai brand dan industri</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="portfolio-filters" id="filterButtons">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="content">Content</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+        <!-- akan diisi JS -->
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Kala Creative — Timeless Digital Identity. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const portfolioData = [
+        { id: 1, title: "Brand X Campaign", category: "social", description: "Social Media Strategy", image: "https://picsum.photos/id/20/600/450" },
+        { id: 2, title: "Fashion Week 2024", category: "social", description: "Instagram Campaign", image: "https://picsum.photos/id/26/600/450" },
+        { id: 3, title: "Viral TikTok", category: "social", description: "TikTok Content", image: "https://picsum.photos/id/30/600/450" },
+        { id: 4, title: "Heritage Coffee", category: "branding", description: "Brand Identity + Packaging", image: "https://picsum.photos/id/42/600/450" },
+        { id: 5, title: "Urban Eats", category: "branding", description: "Logo & Visual Identity", image: "https://picsum.photos/id/48/600/450" },
+        { id: 6, title: "Artisan Leather", category: "branding", description: "Brand Guidelines", image: "https://picsum.photos/id/55/600/450" },
+        { id: 7, title: "E-Commerce Store", category: "web", description: "Website Development", image: "https://picsum.photos/id/60/600/450" },
+        { id: 8, title: "Corporate Landing", category: "web", description: "Landing Page Design", image: "https://picsum.photos/id/66/600/450" },
+        { id: 9, title: "Portfolio Website", category: "web", description: "Custom Website", image: "https://picsum.photos/id/76/600/450" },
+        { id: 10, title: "Product Photography", category: "content", description: "Foto Produk", image: "https://picsum.photos/id/82/600/450" },
+        { id: 11, title: "Video Campaign", category: "content", description: "Creative Video", image: "https://picsum.photos/id/88/600/450" },
+        { id: 12, title: "Motion Graphics", category: "content", description: "2D Animation", image: "https://picsum.photos/id/96/600/450" },
+    ];
+
+    function renderPortfolio(filter = 'all') {
+        const grid = document.getElementById('portfolioGrid');
+        const filtered = filter === 'all' ? portfolioData : portfolioData.filter(item => item.category === filter);
+        
+        grid.innerHTML = filtered.map(item => `
+            <div class="portfolio-item">
+                <img src="${item.image}" alt="${item.title}">
+                <div class="portfolio-overlay">
+                    <h4>${item.title}</h4>
+                    <p>${item.description}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderPortfolio(btn.getAttribute('data-filter'));
+        });
+    });
+
+    renderPortfolio();
+</script>
+</body>
+</html>

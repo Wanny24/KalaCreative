@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Automation - Kala Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #F5F0FF, #EDE5FF);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        .service-content {
+            padding: 80px 0;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .service-description p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: #5a4a68;
+            line-height: 1.7;
+        }
+        .service-features {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+        }
+        .service-features h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(108, 99, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .feature-list li i {
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+            width: 28px;
+        }
+        .service-animation {
+            display: flex;
+            justify-content: center;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-purple);
+            text-decoration: none;
+            margin-top: 40px;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+            .service-hero {
+                padding: 100px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">Kala<span>Creative</span></a>
+        <a href="index.html" class="back-home" style="margin-left: auto;">
+            <i class="fas fa-arrow-left"></i>
+            <span>Kembali ke Beranda</span>
+        </a>
+    </div>
+</nav>
+
+<section class="service-hero">
+    <div class="container">
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_knkkqc3r.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin: 0 auto 24px;" loop autoplay></lottie-player>
+        <h1>Bot Automation</h1>
+        <p>Otomatisasi chat & customer service untuk efisiensi bisnis Anda</p>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-description">
+                <p>Layanan Bot Automation dari Kala Creative membantu Anda mengotomatisasi interaksi dengan pelanggan melalui berbagai platform seperti WhatsApp, Instagram, dan website. Dengan sistem auto-reply yang cerdas, Anda dapat memberikan respons cepat 24/7 tanpa harus selalu online.</p>
+                <p>Bot kami dirancang untuk menangani pertanyaan umum, memproses pesanan, memberikan informasi produk, dan bahkan mengumpulkan data pelanggan secara otomatis. Ini akan meningkatkan efisiensi tim Anda dan memberikan pengalaman pelanggan yang lebih baik.</p>
+                <a href="index.html#contact" class="btn-primary">Konsultasi Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-features">
+                <h3>Apa yang Anda Dapatkan:</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> WhatsApp Business API Integration</li>
+                    <li><i class="fas fa-check-circle"></i> Instagram DM Auto-Reply</li>
+                    <li><i class="fas fa-check-circle"></i> Website Chatbot Integration</li>
+                    <li><i class="fas fa-check-circle"></i> Multi-language Support</li>
+                    <li><i class="fas fa-check-circle"></i> Order Processing Automation</li>
+                    <li><i class="fas fa-check-circle"></i> Customer Data Collection</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Auto-Response System</li>
+                    <li><i class="fas fa-check-circle"></i> Analytics & Reporting Dashboard</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Kala<span>Creative</span></h4>
+                <p>Timeless Digital Identity</p>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#services">Layanan</a>
+                <a href="index.html#contact">Kontak</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 855 1115 118</p>
+                <p><i class="fas fa-envelope"></i> hello@kalacreative.id</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Kala Creative — All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

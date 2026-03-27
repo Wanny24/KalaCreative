@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management - Kala Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #FFF5E6, #FFE6D5);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-earth);
+            margin-bottom: 20px;
+        }
+        .service-content {
+            padding: 60px 0;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .service-description p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: #5a4a38;
+        }
+        .service-features {
+            background: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+        }
+        .service-features h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-earth);
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .feature-list li i {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-orange);
+            text-decoration: none;
+            margin-top: 40px;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">Kala<span>Creative</span></a>
+        <a href="index.html" class="back-home" style="margin-left: auto;">
+            <i class="fas fa-arrow-left"></i>
+            <span>Kembali ke Beranda</span>
+        </a>
+    </div>
+</nav>
+
+<section class="service-hero">
+    <div class="container">
+        <h1>Social Media Management</h1>
+        <p>Kelola media sosial brand Anda dengan strategi terbaik</p>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-description">
+                <p>Layanan Social Media Management dari Kala Creative membantu Anda mengelola akun media sosial dengan konten strategis, konsisten, dan engaging. Kami mengoptimalkan Instagram, TikTok, LinkedIn, dan platform lainnya untuk meningkatkan visibilitas brand Anda.</p>
+                <p>Dengan tim yang berpengalaman, kami memastikan setiap konten yang dipublikasikan tidak hanya menarik secara visual, tetapi juga efektif dalam membangun engagement dan mencapai target bisnis Anda.</p>
+                <a href="index.html#contact" class="btn-primary">Konsultasi Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-features">
+                <h3>Apa yang Anda Dapatkan:</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Content Plan & Strategy</li>
+                    <li><i class="fas fa-check-circle"></i> Design & Short Video Production</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive Stories & Engagement</li>
+                    <li><i class="fas fa-check-circle"></i> Profile Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Weekly & Monthly Reporting</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated Account Manager</li>
+                    <li><i class="fas fa-check-circle"></i> WhatsApp Group with Production Team</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Kala<span>Creative</span></h4>
+                <p>Timeless Digital Identity</p>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#services">Layanan</a>
+                <a href="index.html#contact">Kontak</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-envelope"></i> hello@kalacreative.id</p>
+                <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Kala Creative — All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
