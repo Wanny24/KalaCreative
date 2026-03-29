@@ -411,7 +411,7 @@ const servicesData = [
     { icon: "fab fa-instagram", title: "Social Media Management", desc: "Pengelolaan akun media sosial dengan konten strategis & engagement organik.", link: "social-media-management.html" },
     { icon: "fas fa-camera-retro", title: "Creative Content Production", desc: "Produksi konten kreatif berupa foto, video, dan motion graphics yang engaging.", link: "creative-content.html" },
     { icon: "fas fa-chart-line", title: "Iklan Meta", desc: "Strategi iklan di Facebook & Instagram dengan targeting tepat dan ROI terukur.", link: "meta-ads.html" },
-    { icon: "fas fa-palette", title: "Brand Identity Design", desc: "Logo, visual identity, brand guidelines — menciptakan karakter brand yang autentik.", link: "brand-identity.html" },
+    { icon: "fas fa-palette", title: "Brand Identity Design", desc: "Logo, visual identity, brand guidelines serta menciptakan karakter brand yang autentik.", link: "brand-identity.html" },
     { icon: "fas fa-code", title: "Web Development", desc: "Pengembangan website modern, responsif, dan optimal untuk kebutuhan bisnis Anda.", link: "web-development.html" },
     { icon: "fab fa-tiktok", title: "Live TikTok Handling", desc: "Pengelolaan live streaming TikTok untuk meningkatkan interaksi dan penjualan.", link: "live-tiktok.html" },
     { icon: "fas fa-pen-fancy", title: "Design Graphic", desc: "Desain grafis untuk berbagai kebutuhan visual brand Anda.", link: "graphic-design.html" },
